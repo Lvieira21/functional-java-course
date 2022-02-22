@@ -22,7 +22,9 @@ public class Lecture13 {
               System.out.println("mapping price " + price);
               return price + (price * .14);
             })
+            //operador terminal, se não o chamarmos, teremos uma pipeline de uma stream, mas os métodos map e filter (Operadores intermediarios), por exemplo, não serão executados
             .collect(Collectors.toList())
+            //Streams are Lazy, só viram algum objeto concreto, quando o Operador terminal for chamado
     );
   }
 }
